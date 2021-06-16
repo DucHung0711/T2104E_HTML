@@ -1,0 +1,21 @@
+body{
+    font-family:  'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.top{
+    float: left;
+
+}
+.bottom{
+    float: left;
+    width: 1200px;
+}
+.left{
+    float: left;
+
+}
+.right{
+    float: right;
+    width: 800px;
+}
