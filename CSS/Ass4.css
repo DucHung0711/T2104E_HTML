@@ -18,7 +18,7 @@ header{
     background-image: url(https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
     background-size: 100%;
     height: 500px;
-    border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 0 0;/*đổ bóng cho header*/
     -webkit-border-radius: 25px 25px 0 0;
 }
 .section{
