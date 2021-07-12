@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 class="title">Tieu de bai bao</h1>
+<button style="button" onclick="hidePg();">Hide</button>
+<button style="button" onclick="showPg();">Show</button>
+<button style="button" onclick="onOff();">ON-OFF</button>
+<p class="pg">Ông Chức cho biết, những trường hợp trên có kết quả dương tính tối 2/7. Ngay trong đêm, lực lượng y tế đã đưa các công nhân đi cách ly tập trung, nhưng do không đủ chỗ nên có 16 trường hợp quay về công ty ngủ tạm. Sáng 3/7, tất cả đã được đưa đi cách ly tập trung.</p>
+<p class="pg">Công ty Nidec Sankyo có địa chỉ ở đường N1, thuộc khu Công nghệ cao, phường Tân Phú, TP Thủ Đức. Ngày 28/6, công ty phát hiện có 1 trường hợp dương tính nCoV qua khám bệnh tại Bệnh viện Quân dân y miền Đông.</p>
+<p class="pg">Ngay sau đó, công ty đã tạm ngưng hoạt động để phun khử khuẩn. Lực lượng chức năng tiến hành phong tỏa công ty, lấy mẫu xét nghiệm cho 4.000 công nhân tại đây.</p>
+<script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    var t = $("#title");//tao ra 1 objects jquery
+    t.css({
+      "color":"red",
+      "font-size":"30px",
+    });
+    t.text("Hello everybody");
+    t.html("<i>Hello everybody</i>");
+
+    //var ps = $("p"); <=> getELementsByTagName
+    var ps = $(".pg");
+    ps.css ({
+      "color" : "orange"
+    })
+    function hidePg (){
+      ps.hide();
+      //ps.sildeUp(300);
+    }
+    function showPg (){
+      ps.show();
+      //ps.fadeIn(500);
+      //ps.slideDown(500);
+    }
+    function onOff (){
+        //ps.toggle();
+        //ps.fadeToggle();
+        ps.slideToggle();
+    }
+
+</script>
+</body>
+</html>

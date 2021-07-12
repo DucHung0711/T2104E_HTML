@@ -7,7 +7,6 @@ body{
     background-color: #14182a !important;
     font-family: "Josefin Sans" !important;
 }
-
 .header{
     min-height: 80px;
     background-color: #1b2039;
@@ -17,7 +16,7 @@ body{
     right: 0;
     line-height: 80px;
     z-index: 1;
-    position: relative;
+
 }
 .header .MusicStore{
     text-decoration: none;
@@ -45,6 +44,7 @@ body{
     font-size: 20px;
     color: #2cc8e5;
     position: absolute;
+    padding-top: 100px;
 }
 .recently-played h3{
     line-height: 2.5;
