@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/AssJS3.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AssJS3 load API</h1>
+        </div>
+    </div>
+    <div class="container" id="container">
+        <div id="load-more">
+            <button class="btn" type="button" onclick="loadMore()">Load More</button>
+        </div>
+<!--        <div class="col-md-3">-->
+<!--            <div class="product">-->
+<!--                <img src="imgNhom/pug.jpg">-->
+<!--                <h2>Product name</h2>-->
+<!--                <p>Product desc</p>-->
+<!--                <h2>Price</h2>-->
+<!--                <a href="#" class="details">Details</a>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        function loadMore() {
+            var p = [];
+            $.ajax({
+                url: "https://foodgroup.herokuapp.com/api/category/1",
+                method: "GET",
+                success: function (rs) {
+                    p = rs.data.foods;
+                    var container = $("#container");
+                    for (var i = 0; i < p.length; i++) {
+                        var ct = "<div class=\"col-md-3\">\n" +
+                            "            <div class=\"product\">\n" +
+                            "                <img src=\""+p[i].image+"\">\n" +
+                            "                <h2>"+p[i].name+"</h2>\n" +
+                            "                <p>"+p[i].description+"</p>\n" +
+                            "                <h2>"+p[i].price+"</h2>\n" +
+                            "                <a href=\"#\" class=\"details\">details</a>\n" +
+                            "            </div>\n" +
+                            "        </div>"
+                        container.prepend(ct);
+                    }
+                }
+
+            });
+        }
+    </script>
+</body>
+</html>
